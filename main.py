@@ -275,36 +275,13 @@ def run_training():
             #             os.path.join(root_checkpt_path, Database +"_epoch"+str(epoch)+"_acc"+str(acc)+"_bacc"+str(balanced_acc)+".pth"))
             # #tqdm.write('Model saved.')
             
-            '''affectnet'''
+            
             if (epoch>10) :
                 torch.save({'iter': epoch,
                             'model_state_dict': model.state_dict(),
                               'optimizer_state_dict': optimizer.state_dict(),},
                             os.path.join(root_checkpt_path, Database +"_epoch"+str(epoch)+"_acc"+str(acc)+"_bacc"+str(balanced_acc)+".pth"))
                 tqdm.write('Model saved.')
-            '''rafdb'''    
-            # if (epoch>25 and epoch<50 ):
-            #       torch.save({'iter': epoch,
-            #                   'model_state_dict': model.state_dict(),
-            #                   'optimizer_state_dict': optimizer.state_dict(),},
-            #                   os.path.join(root_checkpt_path, Database +"_epoch"+str(epoch)+"_acc"+str(acc)+"_bacc"+str(balanced_acc)+".pth"))
-            #       tqdm.write('Model saved.') 
-            
-            '''rafdb and affect'''
-            # if (epoch>=40 and epoch<65):
-            #       torch.save({'iter': epoch,
-            #                   'model_state_dict': model.state_dict(),
-            #                   'optimizer_state_dict': optimizer.state_dict(),},
-            #                   os.path.join(root_checkpt_path, Database +"_epoch"+str(epoch)+"_acc"+str(acc)+"_bacc"+str(balanced_acc)+".pth"))
-            #       tqdm.write('Model saved.')
-                  
-            '''RAF-DB'''
-            # if (epoch>55 and epoch<65): #and epoch%2==0
-            #     torch.save({'iter': epoch,
-            #                 'model_state_dict': model.state_dict(),
-            #                   'optimizer_state_dict': optimizer.state_dict(),},
-            #                 os.path.join(root_checkpt_path, Database +"_epoch"+str(epoch)+"_acc"+str(acc)+"_bacc"+str(balanced_acc)+".pth"))
-            #     tqdm.write('Model saved.')
                
                             
 if __name__ == "__main__":        
